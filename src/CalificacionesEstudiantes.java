@@ -26,7 +26,7 @@ public class CalificacionesEstudiantes {
     }
 
     public static void mostrarInformacionEstudiantes(String[] estudiantes, String[] materias, double[][] notas) {
-        System.out.println("Información de los estudiantes: "+notas);
+        System.out.println("Información de los estudiantes: ");
         for (int i = 0; i < estudiantes.length; i++) {
             System.out.print(estudiantes[i] + ": ");
             for (int j = 0; j < materias.length; j++) {
@@ -38,19 +38,19 @@ public class CalificacionesEstudiantes {
 
     public static void calcularPromedios(String[] estudiantes, double[][] notas) {
         System.out.println("\nPromedios de los estudiantes:");
-
         double prom = 0;
+        String nombre = "";
+
         for (int i = 0; i < estudiantes.length; i++) {
             double suma = 0;
             for (int j = 0; j < notas.length; j++) {
                 suma += notas[i][j];
-
             }
             prom = suma / notas[i].length;
-
+            nombre = estudiantes[i];
+            System.out.println(nombre+ "= " + prom);
         }
-        int i =0;
-        System.out.println( +  prom);
+
     }
 
     public static void encontrarMejorEstudiante(String[] estudiantes, double[][] notas) {
